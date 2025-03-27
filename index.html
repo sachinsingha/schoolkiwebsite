@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HansRaj Convent Shikshan Sansthan</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -11,239 +11,289 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background-color: #f4f6f8;
-        overflow-x: hidden;
-      }
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f8;
+  overflow-x: hidden;
+}
 
-      header {
-        background-color: #003366;
-        color: #fff;
-        padding: 30px;
-        text-align: center;
-        display: flex;
-        align-items: center; /* Vertically centers the logo and text */
-        justify-content: center;
-        gap: 20px; /* Adds space between logo and text */
-        animation: slideDown 1s ease forwards;
-      }
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  animation: slideDown 1s ease forwards;
+}
 
-      header img {
-        height: 60px; /* Adjust logo size based on header */
-        width: auto;
-      }
+header img {
+  height: 100px;
+  width: auto;
+}
 
-      header h1 {
-        margin: 0;
-        font-size: 36px;
-      }
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
 
-      header p {
-        margin: 5px 0 0;
-        font-size: 18px;
-      }
+header p {
+  margin: 5px 0 0;
+  font-size: 18px;
+}
 
-      nav {
-        background-color: #00509e;
-        display: flex;
-        justify-content: center;
-        align-items: center;  /* Centers items vertically */
-        flex-wrap: wrap;
-        transition: background 0.3s ease;
-        padding: 10px 0;
-      }
+nav {
+  background-color: #00509e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
 
-      nav a {
-        color: #fff;
-        padding: 14px 20px;
-        text-decoration: none;
-        transition: background 0.3s, transform 0.3s;
-      }
+nav a {
+  color: #fff;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
 
-      nav a:hover {
-        background-color: #003366;
-        transform: scale(1.1);
-      }
+nav a:hover {
+  background-color: #003366;
+  transform: scale(1.1);
+}
 
-      section {
-        padding: 20px;
-        display: none;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease;
-        background: #fff;
-        margin: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      }
+section {
+  padding: 20px;
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  background: #fff;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-      section.active {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-      }
+section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
 
-      h2 {
-        color: #003366;
-        margin-bottom: 15px;
-      }
+h2 {
+  color: #003366;
+  margin-bottom: 15px;
+}
 
-      .hero {
-        background: url("photo.jpg") center/cover no-repeat;
-        height: 300px;
-        color: #003366;
-        text-align: center;
-        padding: 50px;
-        font-size: 30px;
-        animation: fadeIn 2s ease forwards;
-      }
+button {
+  padding: 10px 20px;
+  background-color: #00509e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
 
-      button {
-        padding: 10px 20px;
-        background-color: #00509e;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s, transform 0.3s;
-      }
+button:hover {
+  background-color: #003366;
+  transform: scale(1.05);
+}
 
-      button:hover {
-        background-color: #003366;
-        transform: scale(1.05);
-      }
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: box-shadow 0.3s;
+}
 
-      input,
-      textarea {
-        width: 100%;
-        padding: 12px;
-        margin-top: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        transition: box-shadow 0.3s;
-      }
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 10px #00509e;
+  outline: none;
+}
 
-      input:focus,
-      textarea:focus {
-        box-shadow: 0 0 10px #00509e;
-        outline: none;
-      }
+.gallery {
+  display: flex;
+Скачать кодflex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
 
-      .gallery img {
-        width: 200px;
-        height: auto;
-        margin: 10px;
-        border-radius: 10px;
-        transition: transform 0.4s;
-        cursor: pointer;
-      }
+.gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s;
+  cursor: pointer;
+}
 
-      .gallery img:hover {
-        transform: scale(1.1);
-      }
+.gallery img:hover {
+  transform: scale(1.1);
+}
 
-      .faq-item {
-        cursor: pointer;
-        padding: 10px;
-        background: #fff;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        transition: background 0.3s;
-      }
+.faq-item {
+  cursor: pointer;
+  padding: 10px;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
 
-      .faq-item:hover {
-        background-color: #e3eaf0;
-      }
+.faq-item:hover {
+  background-color: #e3eaf0;
+}
 
-      .faq-answer {
-        display: none;
-        max-height: 0;
-        overflow: hidden;
-        padding: 0 10px;
-        background: #f9f9f9;
-        border-radius: 5px;
-        margin-top: 5px;
-        transition: max-height 0.5s ease-out;
-      }
+.faq-answer {
+  display: none;
+  padding: 0 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  margin-top: 5px;
+}
 
-      .faq-item.open .faq-answer {
-        display: block;
-        max-height: 500px;
-      }
+.faq-item.open .faq-answer {
+  display: block;
+}
 
-      footer {
-        background-color: #003366;
-        color: #fff;
-        text-align: center;
-        padding: 30px 20px;
-        margin-top: 20px;
-        animation: fadeIn 2s ease forwards;
-      }
+footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 20px;
+  animation: fadeIn 2s ease forwards;
+}
 
-      .social-icons i {
-        margin: 0 10px;
-        font-size: 20px;
-        cursor: pointer;
-        transition: transform 0.3s;
-        color: white;
-      }
+.social-icons i {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  color: white;
+}
 
-      .social-icons i:hover {
-        transform: scale(1.2);
-      }
+.social-icons i:hover {
+  transform: scale(1.2);
+}
 
-      /* Animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: scale(0.9);
-        }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-      @keyframes slideDown {
-        from {
-          transform: translateY(-50px);
-          opacity: 0;
-        }
+@media (max-width: 768px) {
+  header img {
+    height: 80px;
+  }
+  header h1 {
+    font-size: 28px;
+  }
+  header p {
+    font-size: 14px;
+  }
+}
 
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
+#quick a {
+  color: #fff;
+  text-decoration: none;
+}
 
-      @media (max-width: 768px) {
-        header img {
-          height: 50px;  /* Adjust the logo size for mobile */
-        }
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
-        header h1 {
-          font-size: 28px; /* Smaller text for smaller screens */
-        }
+.slider-container {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
 
-        header p {
-          font-size: 14px; /* Smaller text for mobile */
-        }
-      }
-      #quick a{
-        color:  #fff;
-        text-decoration: none;
-      }
-    </style>
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 24px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+     </style>
   </head>
 
   <body>
     <header>
-      <img src="logo.jpeg" alt="School Logo" /> <!-- Add your logo image here -->
+      <img src="logo.png" alt="HansRaj Convent Shikshan Sansthan Logo" />
       <div>
         <h1>HansRaj Convent Shikshan Sansthan</h1>
         <p>Knowledge | Discipline | Excellence</p>
@@ -251,7 +301,6 @@
     </header>
 
     <nav>
-      <!-- <img src="logo.jpeg" alt="School Logo" /> Add your logo image here -->
       <a href="#" onclick="showSection('home')">Home</a>
       <a href="#" onclick="showSection('about')">About Us</a>
       <a href="#" onclick="showSection('academics')">Academics</a>
@@ -262,8 +311,20 @@
 
     <main>
       <section id="home" class="active">
-        <div class="hero">
-          <!-- Welcome to HansRaj Convent Shikshan Sansthan -->
+        <div class="slider">
+          <div class="slider-container">
+            <div class="slide">
+              <img src="didi1.jpg" alt="School Event 1" />
+            </div>
+            <div class="slide">
+              <img src="teacher.jpg" alt="Teachers at School" />
+            </div>
+            <div class="slide">
+              <img src="trip.jpg" alt="School Trip" />
+            </div>
+          </div>
+          <button class="prev" aria-label="Previous Slide" onclick="changeSlide(-1)">❮</button>
+          <button class="next" aria-label="Next Slide" onclick="changeSlide(1)">❯</button>
         </div>
         <h2>Latest Notices</h2>
         <ul>
@@ -271,7 +332,6 @@
           <li>Annual Day on April 15th</li>
           <li>Summer Break from May 10th</li>
         </ul>
-
         <h2>Upcoming Events</h2>
         <ul>
           <li>Sports Meet - March 30</li>
@@ -283,9 +343,7 @@
       <section id="about">
         <h2>About Us</h2>
         <p>
-          ABC Public School is a premier educational institution since 1990
-          providing holistic development with academics, sports, and cultural
-          activities.
+          HansRaj Convent Shikshan Sansthan is a premier educational institution since 1990 providing holistic development with academics, sports, and cultural activities.
         </p>
       </section>
 
@@ -316,10 +374,10 @@
       <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-          <img src="https://via.placeholder.com/200x150" alt="Event 1" />
-          <img src="https://via.placeholder.com/200x150" alt="Event 2" />
-          <img src="https://via.placeholder.com/200x150" alt="Event 3" />
-          <img src="https://via.placeholder.com/200x150" alt="Event 4" />
+          <img src="didi1.jpg" alt="School Event 1" />
+          <img src="teacher.jpg" alt="Teachers at School" />
+          <img src="trip.jpg" alt="School Trip" />
+          <img src="photo.jpg" alt="School Event 4" />
         </div>
       </section>
 
@@ -328,10 +386,12 @@
         <p>📍 123 School Road, Education City</p>
         <p>📞 +91 9876543210</p>
         <p>📧 contact@abcschool.com</p>
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Your Email" />
-        <textarea rows="4" placeholder="Your Message"></textarea>
-        <button onclick="alert('Message Sent! (Demo Only)')">Submit</button>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
       </section>
 
       <section id="faq-section">
@@ -342,51 +402,92 @@
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
           Do you provide transport?
-          <div class="faq-answer">
-            Yes, we have safe school transport covering major areas.
-          </div>
+          <div class="faq-answer">Yes, we have safe school transport covering major areas.</div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
           What are admission requirements?
-          <div class="faq-answer">
-            Birth certificate, previous school report, passport photos.
-          </div>
+          <div class="faq-answer">Birth certificate, previous school report, passport photos.</div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 HansRaj Convent Shikshan Sansthan | All Rights Reserved</p>
+      <p>© 2025 HansRaj Convent Shikshan Sansthan | All Rights Reserved</p>
       <div class="social-icons">
-        <a href="https://www.facebook.com/HRCSSSCHOOL">
+        <a href="https://www.facebook.com/HRCSSSCHOOL" aria-label="Facebook">
           <i class="fa-brands fa-facebook"></i>
         </a>
-        <a href="https://www.instagram.com/hansrajconvent98?igsh=MWR1cW1ndmo0cXRuMQ==">
+        <a href="https://www.instagram.com/hansrajconvent98?igsh=MWR1cW1ndmo0cXRuMQ==" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://www.youtube.com/YourChannelLink">
+        <a href="https://www.youtube.com/YourChannelLink" aria-label="YouTube">
           <i class="fa-brands fa-youtube"></i>
         </a>
+        <a href="https://www.google.com/maps/place/6M6M+FG8+Gauriganj,+Uttar+Pradesh+227409,+India" aria-label="Google Maps" target="_blank">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </a>
       </div>
-      <p id="quick">Quick Links: 
-        <a href="#home">Home</a> | 
-        <a href="#about">About</a> | 
-        <a href="#academics">Academics</a> | 
-        <a href="#admissions">Admissions</a> | 
-        <a href="#contact">Contact</a>
+      <p id="quick">
+        Quick Links:
+        <a href="#" onclick="showSection('home')">Home</a> |
+        <a href="#" onclick="showSection('about')">About</a> |
+        <a href="#" onclick="showSection('academics')">Academics</a> |
+        <a href="#" onclick="showSection('admissions')">Admissions</a> |
+        <a href="#" onclick="showSection('contact')">Contact</a>
       </p>
     </footer>
 
     <script>
+      // Section Navigation
       function showSection(sectionId) {
         document.querySelectorAll("section").forEach((sec) => sec.classList.remove("active"));
-        const section = document.getElementById(sectionId);
-        section.classList.add("active");
+        document.getElementById(sectionId).classList.add("active");
       }
 
+      // FAQ Toggle
       function toggleFaq(faqItem) {
         faqItem.classList.toggle("open");
       }
+
+      // Slider Logic
+      // Slider Logic
+let slideIndex = 0;
+let intervalId;
+
+function showSlides() {
+  const slides = document.querySelector(".slider-container");
+  const totalSlides = document.querySelectorAll(".slide").length;
+  slideIndex = (slideIndex + 1) % totalSlides;
+  slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+function changeSlide(n) {
+  clearInterval(intervalId);
+  const slides = document.querySelector(".slider-container");
+  const totalSlides = document.querySelectorAll(".slide").length;
+  slideIndex = (slideIndex + n + totalSlides) % totalSlides;
+  slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+  intervalId = setInterval(showSlides, 3000); // Restart interval
+}
+
+// Initialize Slider
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelector(".slider-container");
+  slides.style.transform = `translateX(0%)`; // Start at first slide
+  intervalId = setInterval(showSlides, 3000); // Auto-slide every 3s
+  showSection("home"); // Show home section by default
+});
+
+// Form Submission (Demo)
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Message Sent! (Demo Only)");
+});
+      // Form Submission (Demo)
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Message Sent! (Demo Only)");
+      });
     </script>
   </body>
 </html>
