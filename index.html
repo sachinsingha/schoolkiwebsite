@@ -1,8 +1,16 @@
-<!DOCTYPE html ="en">
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>ABC Public School</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       body {
         margin: 0;
@@ -16,15 +24,36 @@
         color: #fff;
         padding: 30px;
         text-align: center;
+        display: flex;
+        align-items: center; /* Vertically centers the logo and text */
+        justify-content: center;
+        gap: 20px; /* Adds space between logo and text */
         animation: slideDown 1s ease forwards;
+      }
+
+      header img {
+        height: 60px; /* Adjust logo size based on header */
+        width: auto;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+
+      header p {
+        margin: 5px 0 0;
+        font-size: 18px;
       }
 
       nav {
         background-color: #00509e;
         display: flex;
         justify-content: center;
+        align-items: center;  /* Centers items vertically */
         flex-wrap: wrap;
         transition: background 0.3s ease;
+        padding: 10px 0;
       }
 
       nav a {
@@ -63,10 +92,9 @@
       }
 
       .hero {
-        background: url("https://storage.googleapis.com/indie-hackers.appspot.com/shareable-images/posts/4c70d1b079")
-          center/cover no-repeat;
+        background: url("photo.jpg") center/cover no-repeat;
         height: 300px;
-        color: #fff;
+        color: #003366;
         text-align: center;
         padding: 50px;
         font-size: 30px;
@@ -133,11 +161,18 @@
 
       .faq-answer {
         display: none;
-        padding: 10px;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 10px;
         background: #f9f9f9;
         border-radius: 5px;
         margin-top: 5px;
-        transition: max-height 0.5s ease;
+        transition: max-height 0.5s ease-out;
+      }
+
+      .faq-item.open .faq-answer {
+        display: block;
+        max-height: 500px;
       }
 
       footer {
@@ -154,6 +189,7 @@
         font-size: 20px;
         cursor: pointer;
         transition: transform 0.3s;
+        color: white;
       }
 
       .social-icons i:hover {
@@ -184,16 +220,38 @@
           opacity: 1;
         }
       }
+
+      @media (max-width: 768px) {
+        header img {
+          height: 50px;  /* Adjust the logo size for mobile */
+        }
+
+        header h1 {
+          font-size: 28px; /* Smaller text for smaller screens */
+        }
+
+        header p {
+          font-size: 14px; /* Smaller text for mobile */
+        }
+      }
+      #quick a{
+        color:  #fff;
+        text-decoration: none;
+      }
     </style>
   </head>
 
   <body>
     <header>
-      <h1>ABC Public School</h1>
-      <p>Knowledge | Discipline | Excellence</p>
+      <img src="logo.jpeg" alt="School Logo" /> <!-- Add your logo image here -->
+      <div>
+        <h1>HansRaj Convent Shikshan Sansthan</h1>
+        <p>Knowledge | Discipline | Excellence</p>
+      </div>
     </header>
 
     <nav>
+      <!-- <img src="logo.jpeg" alt="School Logo" /> Add your logo image here -->
       <a href="#" onclick="showSection('home')">Home</a>
       <a href="#" onclick="showSection('about')">About Us</a>
       <a href="#" onclick="showSection('academics')">Academics</a>
@@ -202,120 +260,132 @@
       <a href="#" onclick="showSection('contact')">Contact</a>
     </nav>
 
-    <section id="home" class="active">
-      <div class="hero">Welcome to ABC Public School</div>
-      <h2>Latest Notices</h2>
-      <ul>
-        <li>Admissions Open for 2025-26</li>
-        <li>Annual Day on April 15th</li>
-        <li>Summer Break from May 10th</li>
-      </ul>
-
-      <h2>Upcoming Events</h2>
-      <ul>
-        <li>Sports Meet - March 30</li>
-        <li>Science Exhibition - April 10</li>
-        <li>Art Competition - April 25</li>
-      </ul>
-    </section>
-
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        ABC Public School is a premier educational institution since 1990
-        providing holistic development with academics, sports, and cultural
-        activities.
-      </p>
-    </section>
-
-    <section id="academics">
-      <h2>Academics</h2>
-      <ul>
-        <li>Classes Nursery to XII</li>
-        <li>Streams: Science, Commerce, Arts</li>
-        <li>Smart Classrooms, Labs, Library</li>
-      </ul>
-    </section>
-
-    <section id="admissions">
-      <h2>Admissions Open!</h2>
-      <p>Session 2025-26 - Apply now!</p>
-      <button onclick="alert('Brochure Downloaded (Demo)')">
-        Download Brochure
-      </button>
-      <h3>Fee Structure</h3>
-      <ul>
-        <li>Nursery - ₹25,000/year</li>
-        <li>Primary - ₹30,000/year</li>
-        <li>Secondary - ₹40,000/year</li>
-        <li>Senior Secondary - ₹50,000/year</li>
-      </ul>
-    </section>
-
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <img src="https://via.placeholder.com/200x150" alt="Event 1" />
-        <img src="https://via.placeholder.com/200x150" alt="Event 2" />
-        <img src="https://via.placeholder.com/200x150" alt="Event 3" />
-        <img src="https://via.placeholder.com/200x150" alt="Event 4" />
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>📍 123 School Road, Education City</p>
-      <p>📞 +91 9876543210</p>
-      <p>📧 contact@abcschool.com</p>
-      <input type="text" placeholder="Your Name" />
-      <input type="email" placeholder="Your Email" />
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button onclick="alert('Message Sent! (Demo Only)')">Submit</button>
-    </section>
-
-    <section id="faq-section">
-      <h2>FAQs</h2>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        What is the school timing?
-        <div class="faq-answer">8:00 AM to 2:00 PM (Monday to Saturday).</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        Do you provide transport?
-        <div class="faq-answer">
-          Yes, we have safe school transport covering major areas.
+    <main>
+      <section id="home" class="active">
+        <div class="hero">
+          <!-- Welcome to HansRaj Convent Shikshan Sansthan -->
         </div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        What are admission requirements?
-        <div class="faq-answer">
-          Birth certificate, previous school report, passport photos.
+        <h2>Latest Notices</h2>
+        <ul>
+          <li>Admissions Open for 2025-26</li>
+          <li>Annual Day on April 15th</li>
+          <li>Summer Break from May 10th</li>
+        </ul>
+
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>Sports Meet - March 30</li>
+          <li>Science Exhibition - April 10</li>
+          <li>Art Competition - April 25</li>
+        </ul>
+      </section>
+
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          ABC Public School is a premier educational institution since 1990
+          providing holistic development with academics, sports, and cultural
+          activities.
+        </p>
+      </section>
+
+      <section id="academics">
+        <h2>Academics</h2>
+        <ul>
+          <li>Classes Nursery to XII</li>
+          <li>Streams: Science, Commerce, Arts</li>
+          <li>Smart Classrooms, Labs, Library</li>
+        </ul>
+      </section>
+
+      <section id="admissions">
+        <h2>Admissions Open!</h2>
+        <p>Session 2025-26 - Apply now!</p>
+        <a href="path-to-brochure.pdf" download>
+          <button>Download Brochure</button>
+        </a>
+        <h3>Fee Structure</h3>
+        <ul>
+          <li>Nursery - ₹25,000/year</li>
+          <li>Primary - ₹30,000/year</li>
+          <li>Secondary - ₹40,000/year</li>
+          <li>Senior Secondary - ₹50,000/year</li>
+        </ul>
+      </section>
+
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img src="https://via.placeholder.com/200x150" alt="Event 1" />
+          <img src="https://via.placeholder.com/200x150" alt="Event 2" />
+          <img src="https://via.placeholder.com/200x150" alt="Event 3" />
+          <img src="https://via.placeholder.com/200x150" alt="Event 4" />
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 123 School Road, Education City</p>
+        <p>📞 +91 9876543210</p>
+        <p>📧 contact@abcschool.com</p>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button onclick="alert('Message Sent! (Demo Only)')">Submit</button>
+      </section>
+
+      <section id="faq-section">
+        <h2>FAQs</h2>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          What is the school timing?
+          <div class="faq-answer">8:00 AM to 2:00 PM (Monday to Saturday).</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          Do you provide transport?
+          <div class="faq-answer">
+            Yes, we have safe school transport covering major areas.
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          What are admission requirements?
+          <div class="faq-answer">
+            Birth certificate, previous school report, passport photos.
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      <p>&copy; 2025 ABC Public School | All Rights Reserved</p>
+      <p>&copy; 2025 HansRaj Convent Shikshan Sansthan | All Rights Reserved</p>
       <div class="social-icons">
-        <i>🌐</i>
-        <i>📘</i>
-        <i>📸</i>
+        <a href="https://www.facebook.com/HRCSSSCHOOL">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/hansrajconvent98?igsh=MWR1cW1ndmo0cXRuMQ==">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/YourChannelLink">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
       </div>
-      <p>Quick Links: Home | About | Academics | Admissions | Contact</p>
+      <p id="quick">Quick Links: 
+        <a href="#home">Home</a> | 
+        <a href="#about">About</a> | 
+        <a href="#academics">Academics</a> | 
+        <a href="#admissions">Admissions</a> | 
+        <a href="#contact">Contact</a>
+      </p>
     </footer>
 
     <script>
       function showSection(sectionId) {
-        document
-          .querySelectorAll("section")
-          .forEach((sec) => sec.classList.remove("active"));
+        document.querySelectorAll("section").forEach((sec) => sec.classList.remove("active"));
         const section = document.getElementById(sectionId);
         section.classList.add("active");
       }
 
       function toggleFaq(faqItem) {
-        const answer = faqItem.querySelector(".faq-answer");
-        answer.style.display =
-          answer.style.display === "block" ? "none" : "block";
+        faqItem.classList.toggle("open");
       }
     </script>
   </body>
