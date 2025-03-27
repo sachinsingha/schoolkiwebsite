@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HansRaj Convent Shikshan Sansthan</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css">
+    <style>body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f4f4;
+        overflow-x: hidden;
+      }
+      
+      header {
+        background-color: #003366;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        animation: slideDown 1s ease forwards;
+      }
+      
+      header img {
+        height: 100px;
+        width: auto;
+      }
+      
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+      
+      header p {
+        margin: 5px 0 0;
+        font-size: 18px;
+      }
+      
+      nav {
+        background-color: #00509e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 0;
+      }
+      
+      nav a {
+        color: #fff;
+        padding: 14px 20px;
+        text-decoration: none;
+        transition: background 0.3s, transform 0.3s;
+      }
+      
+      nav a:hover {
+        background-color: #003366;
+        transform: scale(1.1);
+      }
+      
+      section {
+        padding: 20px;
+        display: none;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+        background: #fff;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      section.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      h2 {
+        color: #003366;
+        margin-bottom: 15px;
+      }
+      
+      button {
+        padding: 10px 20px;
+        background-color: #00509e;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+      }
+      
+      button:hover {
+        background-color: #003366;
+        transform: scale(1.05);
+      }
+      
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        transition: box-shadow 0.3s;
+      }
+      
+      input:focus,
+      textarea:focus {
+        box-shadow: 0 0 10px #00509e;
+        outline: none;
+      }
+      
+      .gallery {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      
+      .gallery img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.4s;
+        cursor: pointer;
+      }
+      
+      .gallery img:hover {
+        transform: scale(1.1);
+      }
+      
+      .faq-item {
+        cursor: pointer;
+        padding: 10px;
+        background: #fff;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s;
+      }
+      
+      .faq-item:hover {
+        background-color: #e3eaf0;
+      }
+      
+      .faq-answer {
+        display: none;
+        padding: 0 10px;
+        background: #f9f9f9;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+      
+      .faq-item.open .faq-answer {
+        display: block;
+      }
+      
+      footer {
+        background-color: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 20px;
+        animation: fadeIn 2s ease forwards;
+      }
+      
+      .social-icons img {
+        width: 30px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      
+      .social-icons i {
+        margin: 0 10px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        color: white;
+      }
+      
+      .social-icons i:hover {
+        transform: scale(1.2);
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      
+      @keyframes slideDown {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        header img {
+          height: 80px;
+        }
+        header h1 {
+          font-size: 28px;
+        }
+        header p {
+          font-size: 14px;
+        }
+      }
+      
+      #quick a {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      .slider-profile-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 20px auto;
+      }
+      
+      .slider {
+        position: relative;
+        width: 50%;
+        max-width: 500px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      .slider-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+      
+      .slide {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .slide img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+      }
+      
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px 15px;
+        font-size: 24px;
+        border-radius: 5px;
+        z-index: 10;
+      }
+      
+      .prev {
+        left: 10px;
+      }
+      
+      .next {
+        right: 10px;
+      }
+      
+      .prev:hover,
+      .next:hover {
+        background: #012345;
+      }
+      
+      .sidebar {
+        width: 25%;
+        background: #fff;
+        padding: 15px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      }
+      
+      .sidebar button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        background: #00509e;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: left;
+      }
+      
+      .sidebar button:hover {
+        background: #012345;
+      }
+      
+      .profile-section {
+        width: 25%;
+        background: #fff;
+        padding: 15px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      
+      .profile {
+        margin-bottom: 20px;
+      }
+      
+      .profile img {
+        width: 120px; /* Increased from 80px */
+        height: 120px; /* Increased from 80px */
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      
+      .profile h3 {
+        margin: 10px 0 5px;
+        font-size: 18px;
+      }
+      
+      .profile p {
+        font-size: 14px;
+        color: gray;
+        margin: 0 0 10px;
+      }
+      
+      .profile button {
+        padding: 5px 10px;
+        margin: 5px;
+        border: none;
+        background: #00509e;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+      
+      .profile button:hover {
+        background: #003366;
+      }
+      
+      @media (max-width: 768px) {
+        .slider-profile-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .slider {
+          width: 100%;
+          max-width: 600px;
+          height: 400px;
+        }
+        .sidebar {
+          width: 100%;
+        }
+        .profile-section {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+        }
+        .profile {
+          width: 45%;
+          margin-bottom: 0;
+        }
+      }</style>
+  </head>
+
+  <body>
+    <header>
+      <img src="logo.png" alt="HansRaj Convent Shikshan Sansthan Logo" />
+      <div>
+        <h1>HansRaj Convent Shikshan Sansthan</h1>
+        <p>Knowledge | Discipline | Excellence</p>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('about')">About Us</a>
+      <a href="#" onclick="showSection('academics')">Academics</a>
+      <a href="#" onclick="showSection('admissions')">Admissions</a>
+      <a href="#" onclick="showSection('gallery')">Gallery</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <main>
+        <section id="home" class="active">
+            <div class="slider-profile-container">
+              <aside class="sidebar">
+                <button>Wall of Fame</button>
+                <button>Examination Form 2025-26</button>
+                <button>Cells and Committees</button>
+                <button>Admission 2025-26</button>
+                <button>Results</button>
+                <button>Results</button>
+                
+               
+              </aside>
+              <div class="slider">
+                <div class="slider-container">
+                  <div class="slide">
+                    <img src="didi1.jpg" alt="School Event 1" />
+                  </div>
+                  <div class="slide">
+                    <img src="teacher.jpg" alt="Teachers at School" />
+                  </div>
+                  <div class="slide">
+                    <img src="trip.jpg" alt="School Trip" />
+                  </div>
+                </div>
+                <button class="prev" aria-label="Previous Slide" onclick="changeSlide(-1)">❮</button>
+                <button class="next" aria-label="Next Slide" onclick="changeSlide(1)">❯</button>
+              </div>
+              <aside class="profile-section">
+                <div class="profile">
+                  <img src="shhu.jpg" alt="Person 1" />
+                  <h3>Shubham Mishra</h3>
+                  <p>Principal</p>
+                  <button>Profile</button>
+                  <button>Message</button>
+                </div>
+                <div class="profile">
+                  <img src="shhu.jpg" alt="Person 2" />
+                  <h3>Mishra ke bhai</h3>
+                  <p>Vice Principal</p>
+                  <button>Profile</button>
+                  <button>Message</button>
+                </div>
+              </aside>
+            </div>
+            <h2>Latest Notices</h2>
+            <ul>
+              <li>Admissions Open for 2025-26</li>
+              <li>Annual Day on April 15th</li>
+              <li>Summer Break from May 10th</li>
+            </ul>
+            <h2>Upcoming Events</h2>
+            <ul>
+              <li>Sports Meet - March 30</li>
+              <li>Science Exhibition - April 10</li>
+              <li>Art Competition - April 25</li>
+            </ul>
+          </section>
+
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          HansRaj Convent Shikshan Sansthan is a premier educational institution since 1990 providing holistic development with academics, sports, and cultural activities.
+        </p>
+      </section>
+
+      <section id="academics">
+        <h2>Academics</h2>
+        <ul>
+          <li>Classes Nursery to XII</li>
+          <li>Streams: Science, Commerce, Arts</li>
+          <li>Smart Classrooms, Labs, Library</li>
+        </ul>
+      </section>
+
+      <section id="admissions">
+        <h2>Admissions Open!</h2>
+        <p>Session 2025-26 - Apply now!</p>
+        <a href="path-to-brochure.pdf" download>
+          <button>Download Brochure</button>
+        </a>
+        <h3>Fee Structure</h3>
+        <ul>
+          <li>Nursery - ₹25,000/year</li>
+          <li>Primary - ₹30,000/year</li>
+          <li>Secondary - ₹40,000/year</li>
+          <li>Senior Secondary - ₹50,000/year</li>
+        </ul>
+      </section>
+
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img src="didi1.jpg" alt="School Event 1" />
+          <img src="teacher.jpg" alt="Teachers at School" />
+          <img src="trip.jpg" alt="School Trip" />
+          <img src="photo.jpg" alt="School Event 4" />
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 123 School Road, Education City</p>
+        <p>📞 +91 9876543210</p>
+        <p>📧 contact@abcschool.com</p>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section id="faq-section">
+        <h2>FAQs</h2>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          What is the school timing?
+          <div class="faq-answer">8:00 AM to 2:00 PM (Monday to Saturday).</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          Do you provide transport?
+          <div class="faq-answer">Yes, we have safe school transport covering major areas.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          What are admission requirements?
+          <div class="faq-answer">Birth certificate, previous school report, passport photos.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 HansRaj Convent Shikshan Sansthan | All Rights Reserved</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/HRCSSSCHOOL" aria-label="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/hansrajconvent98?igsh=MWR1cW1ndmo0cXRuMQ==" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/YourChannelLink" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.google.com/maps/place/6M6M+FG8+Gauriganj,+Uttar+Pradesh+227409,+India" aria-label="Google Maps" target="_blank">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </a>
+      </div>
+      <p id="quick">
+        Quick Links:
+        <a href="#" onclick="showSection('home')">Home</a> |
+        <a href="#" onclick="showSection('about')">About</a> |
+        <a href="#" onclick="showSection('academics')">Academics</a> |
+        <a href="#" onclick="showSection('admissions')">Admissions</a> |
+        <a href="#" onclick="showSection('contact')">Contact</a>
+      </p>
+    </footer>
+
+    <script src="script.js">
+      
+    </script>
+  </body>
+</html>
