@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ABC Public School</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+      }
+      header {
+        background-color: #003366;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        background-color: #00509e;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav a {
+        color: #fff;
+        padding: 14px 20px;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+      nav a:hover {
+        background-color: #003366;
+      }
+      section {
+        padding: 20px;
+        display: none;
+      }
+      section.active {
+        display: block;
+        background: #fff;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #003366;
+      }
+      footer {
+        background-color: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 20px;
+      }
+      .gallery img {
+        width: 200px;
+        height: auto;
+        margin: 10px;
+        border-radius: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #00509e;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #003366;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .hero {
+        background: url("https://storage.googleapis.com/indie-hackers.appspot.com/shareable-images/posts/4c70d1b079")
+          center/cover no-repeat;
+        height: 300px;
+        color: #fff;
+        text-align: center;
+        padding: 50px;
+        font-size: 30px;
+      }
+      .notice,
+      .events,
+      .facilities,
+      .faq {
+        background-color: #e3eaf0;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      .faq-item {
+        cursor: pointer;
+        padding: 10px;
+        background: #fff;
+        margin-bottom: 5px;
+        border-radius: 5px;
+      }
+      .faq-answer {
+        display: none;
+        padding: 10px;
+        background: #f9f9f9;
+        border-radius: 5px;
+      }
+      .social-icons i {
+        margin: 0 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ABC Public School</h1>
+      <p>Knowledge | Discipline | Excellence</p>
+    </header>
+
+    <nav>
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('about')">About Us</a>
+      <a href="#" onclick="showSection('academics')">Academics</a>
+      <a href="#" onclick="showSection('admissions')">Admissions</a>
+      <a href="#" onclick="showSection('gallery')">Gallery</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <section id="home" class="active">
+      <div class="hero">Welcome to ABC Public School</div>
+      <h2>Latest Notices</h2>
+      <div class="notice">
+        <ul>
+          <li>Admissions Open for 2025-26</li>
+          <li>Annual Day Celebration on April 15th</li>
+          <li>Summer Break starts from May 10th</li>
+        </ul>
+      </div>
+
+      <h2>Upcoming Events</h2>
+      <div class="events">
+        <ul>
+          <li>Sports Meet - March 30</li>
+          <li>Science Exhibition - April 10</li>
+          <li>Art & Craft Competition - April 25</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Founded in 1990, ABC Public School is dedicated to providing quality
+        education and nurturing talent in academics, sports, and arts.
+      </p>
+      <p>
+        <b>Mission:</b> Inspire lifelong learning, leadership, and
+        responsibility in our students.
+      </p>
+    </section>
+
+    <section id="academics">
+      <h2>Academics</h2>
+      <ul>
+        <li>Classes from Nursery to XII</li>
+        <li>Science, Commerce, and Humanities streams</li>
+        <li>Smart Classrooms, Well-equipped Labs, and Libraries</li>
+      </ul>
+
+      <h2>Facilities</h2>
+      <div class="facilities">
+        <ul>
+          <li>Library & Reading Room</li>
+          <li>Computer & Science Labs</li>
+          <li>Sports Complex & Playground</li>
+          <li>Transport Facilities</li>
+          <li>Medical & First Aid Room</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="admissions">
+      <h2>Admissions</h2>
+      <p>Admission for the academic year 2025-26 is now open!</p>
+      <button onclick="alert('Brochure Downloaded (Demo)')">
+        Download Brochure
+      </button>
+      <h3>Fee Structure (Sample)</h3>
+      <ul>
+        <li>Nursery - ₹25,000/year</li>
+        <li>Primary - ₹30,000/year</li>
+        <li>Secondary - ₹40,000/year</li>
+        <li>Senior Secondary - ₹50,000/year</li>
+      </ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/200x150" alt="Event 1" />
+        <img src="https://via.placeholder.com/200x150" alt="Event 2" />
+        <img src="https://via.placeholder.com/200x150" alt="Event 3" />
+        <img src="https://via.placeholder.com/200x150" alt="Event 4" />
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>📍 123 School Road, Education City</p>
+      <p>📞 +91 9876543210</p>
+      <p>📧 contact@abcschool.com</p>
+      <h3>Send Us a Message</h3>
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button onclick="alert('Message Sent! (Demo Only)')">Submit</button>
+    </section>
+
+    <section id="faq-section">
+      <h2>FAQs</h2>
+      <div class="faq">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          What is the school timing?
+          <div class="faq-answer">
+            School timing is from 8:00 AM to 2:00 PM (Monday to Saturday).
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          Do you provide transport facilities?
+          <div class="faq-answer">
+            Yes, we provide transport facilities in major routes.
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          What documents are required for admission?
+          <div class="faq-answer">
+            Birth certificate, previous marksheet, passport-sized photos.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 ABC Public School | All Rights Reserved</p>
+      <div class="social-icons">
+        <i>🌐</i>
+        <i>📘</i>
+        <i>📸</i>
+      </div>
+      <p>Quick Links: Home | About | Academics | Admissions | Contact</p>
+    </footer>
+
+    <script>
+      function showSection(sectionId) {
+        document
+          .querySelectorAll("section")
+          .forEach((sec) => sec.classList.remove("active"));
+        document.getElementById(sectionId).classList.add("active");
+      }
+
+      function toggleFaq(faqItem) {
+        const answer = faqItem.querySelector(".faq-answer");
+        answer.style.display =
+          answer.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
