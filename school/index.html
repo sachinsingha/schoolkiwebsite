@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HansRaj Convent Shikshan Sansthan</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="logo.png" alt="HansRaj Convent Shikshan Sansthan Logo" />
+      <div>
+        <h1>HansRaj Convent Shikshan Sansthan</h1>
+        <p>Knowledge | Discipline | Excellence</p>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('about')">About Us</a>
+      <a href="#" onclick="showSection('academics')">Academics</a>
+      <a href="#" onclick="showSection('admissions')">Admissions</a>
+      <a href="#" onclick="showSection('gallery')">Gallery</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+      <a href="#" onclick="showSection('faq-section')">FAQs</a>
+    </nav>
+
+    <main>
+      <section id="home" class="active">
+        <div class="slider-profile-container">
+          <aside class="sidebar">
+            <button>Principal's Message</button>
+            <button>School Facilities</button>
+            <button>Fee Structure</button>
+            <button>Examination Form 2025-26</button>
+            <button>Results</button>
+            <button>Student Life</button>
+            <button>Events & Activities</button>
+            <button>Sports & Athletics</button>
+            <button>Clubs & Committees</button>
+            <button>Trips</button>
+          </aside>
+          <div class="slider">
+            <div class="slider-container">
+              <div class="slide">
+                <img src="didi1.jpg" alt="School Event 1" />
+              </div>
+              <div class="slide">
+                <img src="teacher.jpg" alt="Teachers at School" />
+              </div>
+              <div class="slide">
+                <img src="trip.jpg" alt="School Trip" />
+              </div>
+            </div>
+            <button
+              class="prev"
+              aria-label="Previous Slide"
+              onclick="changeSlide(-1)"
+            >
+              ❮
+            </button>
+            <button
+              class="next"
+              aria-label="Next Slide"
+              onclick="changeSlide(1)"
+            >
+              ❯
+            </button>
+          </div>
+          <aside class="profile-section">
+            <div class="profile">
+              <img src="shhu.jpg" alt="Person 1" />
+              <h3>Shubham Mishra</h3>
+              <p>Principal</p>
+              <button>Profile</button>
+              <button>Message</button>
+            </div>
+            <div class="profile">
+              <img src="shhu.jpg" alt="Person 2" />
+              <h3>Mishra ke bhai</h3>
+              <p>Vice Principal</p>
+              <button>Profile</button>
+              <button>Message</button>
+            </div>
+          </aside>
+        </div>
+        <h2>Latest Notices</h2>
+        <ul>
+          <li>Admissions Open for 2025-26</li>
+          <li>Annual Day on April 15th</li>
+          <li>Summer Break from May 10th</li>
+        </ul>
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>Sports Meet - March 30</li>
+          <li>Science Exhibition - April 10</li>
+          <li>Art Competition - April 25</li>
+        </ul>
+      </section>
+
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          HansRaj Convent Shikshan Sansthan is a premier educational institution
+          since 1990 providing holistic development with academics, sports, and
+          cultural activities.
+        </p>
+      </section>
+
+      <section id="academics">
+        <h2>Academics</h2>
+        <ul>
+          <li>Classes Nursery to XII</li>
+          <li>Streams: Science, Commerce, Arts</li>
+          <li>Smart Classrooms, Labs, Library</li>
+        </ul>
+      </section>
+
+      <section id="admissions">
+        <h2>Admissions Open!</h2>
+        <p>Session 2025-26 - Apply now!</p>
+        <a href="path-to-brochure.pdf" download>
+          <button>Download Brochure</button>
+        </a>
+        <h3>Fee Structure</h3>
+        <ul>
+          <li>Nursery - ₹25,000/year</li>
+          <li>Primary - ₹30,000/year</li>
+          <li>Secondary - ₹40,000/year</li>
+          <li>Senior Secondary - ₹50,000/year</li>
+        </ul>
+      </section>
+
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="didi1.jpg" alt="School Event 1" />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Annual Cultural Fest 2024 - A vibrant celebration of talent!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="teacher.jpg" alt="Teachers at School" />
+              </div>
+              <div class="flip-card-back">
+                <p>Our dedicated teachers guiding students to success.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="trip.jpg" alt="School Trip" />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  School Trip to Historical Sites - Learning beyond the
+                  classroom.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="photo.jpg" alt="School Event 4" />
+              </div>
+              <div class="flip-card-back">
+                <p>Sports Day 2023 - Encouraging teamwork and fitness!</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="photo.jpg" alt="School Event 4" />
+              </div>
+              <div class="flip-card-back">
+                <p>Sports Day 2023 - Encouraging teamwork and fitness!</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="photo.jpg" alt="School Event 4" />
+              </div>
+              <div class="flip-card-back">
+                <p>Sports Day 2023 - Encouraging teamwork and fitness!</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="photo.jpg" alt="School Event 4" />
+              </div>
+              <div class="flip-card-back">
+                <p>Sports Day 2023 - Encouraging teamwork and fitness!</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="photo.jpg" alt="School Event 4" />
+              </div>
+              <div class="flip-card-back">
+                <p>Sports Day 2023 - Encouraging teamwork and fitness!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 123 School Road, Education City</p>
+        <p>📞 +91 9876543210</p>
+        <p>📧 contact@abcschool.com</p>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section id="faq-section">
+        <h2>FAQs</h2>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          What is the school timing?
+          <div class="faq-answer">8:00 AM to 2:00 PM (Monday to Saturday).</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          Do you provide transport?
+          <div class="faq-answer">
+            Yes, we have safe school transport covering major areas.
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          What are admission requirements?
+          <div class="faq-answer">
+            Birth certificate, previous school report, passport photos.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 HansRaj Convent Shikshan Sansthan | All Rights Reserved</p>
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/HRCSSSCHOOL"
+          aria-label="Facebook"
+          target="_blank"
+        >
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/hansrajconvent98?igsh=MWR1cW1ndmo0cXRuMQ=="
+          aria-label="Instagram"
+          target="_blank"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/YourChannelLink"
+          aria-label="YouTube"
+          target="_blank"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://maps.app.goo.gl/AMQh6GpXBDaVjoYs9">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </a>
+      </div>
+
+      <p id="quick">
+        Quick Links:
+        <a href="#" onclick="showSection('home')">Home</a> |
+        <a href="#" onclick="showSection('about')">About</a> |
+        <a href="#" onclick="showSection('academics')">Academics</a> |
+        <a href="#" onclick="showSection('admissions')">Admissions</a> |
+        <a href="#" onclick="showSection('contact')">Contact</a> |
+        <a href="#" onclick="showSection('faq-section')">FAQs</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
