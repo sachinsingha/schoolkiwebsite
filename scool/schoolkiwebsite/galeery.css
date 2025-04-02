@@ -1,0 +1,32 @@
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+}
+.gallery-container { 
+    max-width: 900px; 
+    margin: auto; 
+}
+.buttons { 
+    margin-bottom: 20px; 
+}
+button { 
+    margin: 5px; 
+    padding: 10px; 
+    cursor: pointer; 
+    border: none; 
+    background: #007bff; 
+    color: white; 
+    border-radius: 5px; 
+}
+button:hover { 
+    background: #0056b3; 
+}
+.gallery img { 
+    width: 100%; 
+    max-width: 300px; 
+    margin: 10px; 
+    display: none; 
+}
+.show { 
+    display: inline-block; 
+}

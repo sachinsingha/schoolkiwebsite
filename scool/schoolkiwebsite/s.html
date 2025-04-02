@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .sidebar {
+            width: 20%;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background: orange;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .sidebar button:hover {
+            background: darkorange;
+        }
+        .social-icons img {
+            width: 30px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .content {
+            width: 60%;
+            text-align: center;
+            padding: 20px;
+        }
+        .content img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .profile-section {
+            width: 20%;
+            background: #fff;
+            padding: 15px;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .profile img {
+            width: 80px;
+            border-radius: 50%;
+        }
+        .profile h3 {
+            margin: 10px 0 5px;
+        }
+        .profile p {
+            font-size: 14px;
+            color: gray;
+        }
+        .profile button {
+            padding: 5px 10px;
+            margin: 5px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        .profile button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <button>Wall of Fame</button>
+            <button>Examination Form 2023-24</button>
+            <button>Cells and Committees</button>
+            <button>KOPAL (LMS)</button>
+            <button>Admission 2024-25</button>
+            <button>Results</button>
+            <div class="social-icons">
+                <img src="facebook-icon.png" alt="Facebook">
+                <img src="twitter-icon.png" alt="Twitter">
+                <img src="instagram-icon.png" alt="Instagram">
+                <img src="youtube-icon.png" alt="YouTube">
+            </div>
+        </aside>
+        <main class="content">
+            <img src="convocation.jpg" alt="Convocation Ceremony">
+        </main>
+        <aside class="profile-section">
+            <div class="profile">
+                <img src="anandiben.jpg" alt="Smt. Anandiben Patel">
+                <h3>Smt. Anandiben Patel</h3>
+                <p>Hon'ble Governor of Uttar Pradesh and Chancellor, KMCLU</p>
+                <button>Profile</button>
+                <button>Message</button>
+            </div>
+            <div class="profile">
+                <img src="jp-pandey.jpg" alt="Prof. J. P. Pandey">
+                <h3>Prof. J. P. Pandey</h3>
+                <p>Vice Chancellor</p>
+                <button>Profile</button>
+                <button>Message</button>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

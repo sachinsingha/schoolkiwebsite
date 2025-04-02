@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Gallery</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .gallery-container { max-width: 900px; margin: auto; }
+        .buttons { margin-bottom: 20px; }
+        button { margin: 5px; padding: 10px; cursor: pointer; }
+        .gallery img { width: 100%; max-width: 300px; margin: 10px; display: none; }
+        .show { display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>School Gallery</h1>
+    <div class="buttons">
+        <button onclick="filterGallery('all')">All</button>
+        <button onclick="filterGallery('tour')">Tour</button>
+        <button onclick="filterGallery('jan26')">26 January</button>
+        <button onclick="filterGallery('aug15')">15 August</button>
+        <button onclick="filterGallery('sports')">Sports Competition</button>
+    </div>
+    
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="tour1.jpg" class="tour show" alt="Tour">
+            <img src="tour2.jpg" class="tour show" alt="Tour">
+            <img src="jan26_1.jpg" class="jan26 show" alt="26 January">
+            <img src="jan26_2.jpg" class="jan26 show" alt="26 January">
+            <img src="aug15_1.jpg" class="aug15 show" alt="15 August">
+            <img src="aug15_2.jpg" class="aug15 show" alt="15 August">
+            <img src="sports1.jpg" class="sports show" alt="Sports Competition">
+            <img src="sports2.jpg" class="sports show" alt="Sports Competition">
+        </div>
+    </div>
+
+    <script>
+        function filterGallery(category) {
+            let images = document.querySelectorAll(".gallery img");
+            images.forEach(img => img.classList.remove("show"));
+            
+            if (category === "all") {
+                images.forEach(img => img.classList.add("show"));
+            } else {
+                document.querySelectorAll("." + category).forEach(img => img.classList.add("show"));
+            }
+        }
+    </script>
+</body>
+</html>
